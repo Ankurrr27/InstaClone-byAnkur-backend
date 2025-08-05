@@ -17,7 +17,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // ✅ Proper way to parse URL-encoded data
 app.use(cookieParser());
 app.use(cors({
-  origin: "http://localhost:5173", // ✅ Frontend origin
+   origin: [
+    "http://localhost:5173", // local dev
+    "https://insta-clone-by-ankur-frontend-7dorvl3h7.vercel.app" // deployed frontend
+  ], // ✅ Frontend origin
   credentials: true               // ✅ Allow cookies to pass through
 }));
 
