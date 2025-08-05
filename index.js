@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // ✅ Proper way to parse URL-encoded data
 app.use(cookieParser());
 
-const cors = require("cors") 
+
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://insta-clone-by-ankur-frontend.vercel.app"], 
