@@ -8,6 +8,7 @@ import postRoute from "./routes/post.route.js";
 import messageRoute from "./routes/message.route.js";
 import { app, server } from "./socket/socket.js";
 
+
 // 🧪 Config
 dotenv.config();
 const PORT = process.env.PORT || 8000;
@@ -20,7 +21,7 @@ app.use(cookieParser());
 const cors = require("cors") 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://your-frontend.vercel.app"], // 👈 replace with actual frontend
+    origin: ["http://localhost:5173", "https://insta-clone-by-ankur-frontend.vercel.app"], 
     credentials: true, // 🔥 important for cookies
   })
 );
