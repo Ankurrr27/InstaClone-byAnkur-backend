@@ -17,12 +17,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // ✅ Proper way to parse URL-encoded data
 app.use(cookieParser());
 
-const cors = 
-app.use(cors({
-  origin: 'https://insta-clone-by-ankur-frontend.vercel.app', // frontend domain
-  credentials: true
-}));
-
+const cors = require("cors") 
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://your-frontend.vercel.app"], // 👈 replace with actual frontend
+    credentials: true, // 🔥 important for cookies
+  })
+);
 // 🚏 API Routes
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/post", postRoute);
