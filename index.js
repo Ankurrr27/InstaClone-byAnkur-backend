@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(cors({
    origin: [
     "http://localhost:5173", // local dev
-    "https://insta-clone-by-ankur-frontend.vercel.app"
+    "https://instaclone-byankur-backend.onrender.com"
  // deployed frontend
   ], // ✅ Frontend origin
   credentials: true               // ✅ Allow cookies to pass through
