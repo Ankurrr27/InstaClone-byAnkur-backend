@@ -9,13 +9,12 @@ import messageRoute from "./routes/message.route.js";
 import { app, server } from "./socket/socket.js";
 
 
-// 🧪 Config
 dotenv.config();
 const PORT = process.env.PORT || 8000;
 
-// 🛡️ Middleware
+
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // ✅ Proper way to parse URL-encoded data
+app.use(express.urlencoded({ extended: true })); 
 app.use(cookieParser());
 
 
