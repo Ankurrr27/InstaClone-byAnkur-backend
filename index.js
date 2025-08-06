@@ -20,7 +20,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin:  "https://insta-clone-by-ankur-frontend.vercel.app", 
+    origin:  ["https://insta-clone-by-ankur-frontend.vercel.app"], 
     credentials: true,
   })
 );
