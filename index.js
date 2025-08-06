@@ -22,15 +22,17 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://insta-clone-by-ankur-frontend.vercel.app"], 
-    credentials: true, // 🔥 important for cookies
+    credentials: true,
   })
 );
-// 🚏 API Routes
+
+
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/post", postRoute);
 app.use("/api/v1/message", messageRoute);
 
-// 🚀 Server start
+
+
 const startServer = async () => {
   try {
     await connectDB();
